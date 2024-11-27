@@ -1,4 +1,4 @@
-﻿namespace Exercise_1
+﻿namespace Exercise_2
 {
     partial class Form1
     {
@@ -30,6 +30,7 @@
         {
             this.tbProjectName = new System.Windows.Forms.TextBox();
             this.btFindOrCreate = new System.Windows.Forms.Button();
+            this.btCreateShape = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbProjectName
@@ -49,15 +50,26 @@
             this.btFindOrCreate.UseVisualStyleBackColor = true;
             this.btFindOrCreate.Click += new System.EventHandler(this.btFindOrCreate_Click);
             // 
+            // btCreateShape
+            // 
+            this.btCreateShape.Location = new System.Drawing.Point(13, 55);
+            this.btCreateShape.Name = "btCreateShape";
+            this.btCreateShape.Size = new System.Drawing.Size(280, 36);
+            this.btCreateShape.TabIndex = 2;
+            this.btCreateShape.Text = "Create a shape";
+            this.btCreateShape.UseVisualStyleBackColor = true;
+            this.btCreateShape.Click += new System.EventHandler(this.btCreateShape_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(305, 45);
+            this.ClientSize = new System.Drawing.Size(305, 101);
+            this.Controls.Add(this.btCreateShape);
             this.Controls.Add(this.btFindOrCreate);
             this.Controls.Add(this.tbProjectName);
             this.Name = "Form1";
-            this.Text = "Exercise 1";
+            this.Text = "Exercise 2";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -67,6 +79,7 @@
 
         private System.Windows.Forms.TextBox tbProjectName;
         private System.Windows.Forms.Button btFindOrCreate;
+        private System.Windows.Forms.Button btCreateShape;
     }
 }
 
