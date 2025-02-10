@@ -4,6 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using TopSolid.Kernel.Automating;
+using TopSolid.Cad.Design.Automating;
+using TopSolid.Cad.Drafting.Automating;
+
 namespace Exercise_1
 {
     internal static class Program
@@ -14,9 +18,19 @@ namespace Exercise_1
         [STAThread]
         static void Main()
         {
+            //connect to automation
+            TopSolidHost.Connect();
+            TopSolidDesignHost.Connect();
+            TopSolidDraftingHost.Connect();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
+            //disconnect 
+            TopSolidHost.Disconnect();
+            TopSolidDesignHost.Disconnect();
+            TopSolidDraftingHost.Disconnect();
         }
     }
 }

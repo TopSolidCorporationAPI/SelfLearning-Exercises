@@ -8,7 +8,7 @@ using TopSolid.Kernel.Automating;
 using TopSolid.Cad.Design.Automating;
 using TopSolid.Cad.Drafting.Automating;
 
-namespace Automation_SelfLearning
+namespace Exercise_3
 {
     internal static class Program
     {
@@ -18,7 +18,7 @@ namespace Automation_SelfLearning
         [STAThread]
         static void Main()
         {
-            //connect to automating
+            //connect to automation
             TopSolidHost.Connect();
             TopSolidDesignHost.Connect();
             TopSolidDraftingHost.Connect();
@@ -27,7 +27,7 @@ namespace Automation_SelfLearning
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
 
-            //connect to automating
+            //disconnect 
             TopSolidHost.Disconnect();
             TopSolidDesignHost.Disconnect();
             TopSolidDraftingHost.Disconnect();
