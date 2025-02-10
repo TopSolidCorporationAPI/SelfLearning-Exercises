@@ -260,8 +260,7 @@ namespace Exercise_3
                             {
                                 if (TopSolidHost.Elements.GetFriendlyName(publishing) == "MyPublishedFrame")
                                 {
-                                    ElementId publishingFrameImage = TopSolidDesignHost.Assemblies.GetOccurrencePublishing(insertedElementId, publishing);
-                                    publishedFrame = publishingFrameImage;
+                                    publishedFrame = TopSolidDesignHost.Assemblies.GetOccurrencePublishing(insertedElementId, publishing);
                                     break;
                                 }
                             }
